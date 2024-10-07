@@ -19,7 +19,7 @@ try:
         for i in range(256):
             GPIO.output(dac, decimal2binary(i))
             time.sleep(period / 512)
-        for i in range(255, -1, -1):
+        for i in range(255, 1, -1):
             GPIO.output(dac, decimal2binary(i))
             time.sleep(period / 512)
 finally:
